@@ -1,0 +1,56 @@
+html{
+				font-size:62.5%;
+			}
+			body{
+				background-image: url("../images/login_bg.jpg");
+				background-size: 100vw 100vh;
+			}
+			.container{
+				margin: 0 auto;
+			}
+			.container .title{
+				text-align:center;
+				color:white;
+				font-size:7vw;
+				margin-top: 80px;
+				margin-bottom:30px;
+				text-shadow: 3px 3px 10px black;
+			}
+			.container .login-box{
+				width:50vw;
+				height:50vh;
+				margin: 0 auto;
+				border-radius:5px;
+				box-shadow: 0px 0px 5px 2px black;
+				vertical-align: middle;
+				position: relative;
+				padding:20px;
+			}
+			.login{
+				width:50%;
+				position: absolute;
+				left:50%;
+				top:50%;
+				transform: translate(-50%,-50%);
+			}
+			.fix_width{
+				width:100%;
+			}
+			.user_width{
+				width:20%;
+			}
+			.container .login-box .login input{
+				width:100%;	
+			}
+			.container .login-box .login #loginBtn{
+				margin-top:20px;
+				width:100%;
+			}
+			@media screen and (max-width:768px){
+				.container .login-box{
+					width:90%;
+				}
+				.login{
+					width:90%;
+				}
+			}

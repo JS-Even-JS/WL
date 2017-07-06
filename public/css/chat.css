@@ -1,0 +1,333 @@
+html{
+	font-size:10px;
+}
+body,h1,ul{
+	margin:0;
+	padding:0;
+}
+ul li{
+	list-style:none;
+	position:relative;
+}
+.unRead{
+	display: inline-block;
+	width:20px;
+	height:20px;
+	background:red;
+	border-radius: 50%;
+	position: absolute;
+	left:70px;
+	top:3px;
+	font-size:12px;
+	text-align:center;
+	color:white;
+	//
+}
+.isRead{
+	background: transparent;
+}
+/*用户列表CSS开始*/
+#users{
+	height:100vh;
+	margin-left:-15px;//移除bootstrap container容器的左右空白;
+	margin-right:-15px;
+	box-shadow: 0px 0px 5px 2px black;
+	background:#F3F3F7;
+	background: white;
+	overflow: auto;
+	border-bottom:2px solid black;
+}
+#users h1{
+	background-image: url("../images/h1_bg.png");
+	background-repeat: repeat;
+	color: white;
+	text-align:center;
+	font-size:2rem;
+	font-weight:bold;
+	font-family: "宋体";
+	padding:10px 0;
+}			
+			
+#users-list{
+	font-size:2rem;
+}
+#users-list img{
+	max-width: 70px;
+	border-radius:.3rem;
+	height: auto;
+}
+#users-list li{
+	padding:10px;
+	border-bottom:1px solid #DADADE;
+	cursor: pointer;
+	
+}
+#users-list li:active{
+	background: #ccc;
+}
+#users-list li a{
+	padding-left:10px;
+	color:black;
+	font-size:20px;
+}
+
+/*用户列表CSS结束*/
+/*聊天窗口CSS开始*/
+#chatWindow{
+	display:none;
+}
+#chatWindow{
+	height:100vh;
+	margin-left:-15px;//移除bootstrap container容器的左右空白;
+	margin-right:-15px;
+}
+#chatBox{
+	border-radius: 5px;
+	box-shadow: 0px 0px 5px 2px black;
+	
+}
+#chatBox h1{
+	background-image: url("../images/h1_bg.png");
+	background-repeat: repeat;
+	color: white;
+	text-align:center;
+	font-size:2rem;
+	padding:10px 0;
+	position:relative;
+}
+#chatObj{
+	margin: 0 auto;
+}
+#back{
+	position:absolute;
+	left:1rem;
+	top:50%;
+	transform: translate(0%,-70%);
+	font-weight: normal;
+	font-size:1.6rem;
+}
+#back span{
+	font-weight: bold;
+	font-size:2.5rem;
+}
+.count{
+	font-size:1.6rem !important;
+}
+/*聊天内容区CSS开始*/
+#chatArea{
+	height:calc(100vh - 128px);
+	overflow: auto;
+	background:#EBEBEB;
+}
+.chatItem:after{
+	content:"";
+	display:block;
+	clear:both;
+}
+.chatInfoBox{
+	margin-top:10px;
+	float:left;
+}
+.chatInfoBox.me{
+	float:right;
+}
+.userHeadIcon{
+	float:left;
+}
+.userHeadIcon.me{
+	float:right;
+}
+.userHeadIcon img{
+	border-radius: 20px;
+	width:40px;
+}
+.chatInfo{
+	float:left;
+	text-align:left;
+	position: relative;
+	margin-left:5px;
+}
+.chatInfo.me{
+	position: relative;
+	margin-right:5px;
+	float:right;
+	text-align:right;
+}
+.chatTime{
+	color:#8b8b8b;
+	font-size:12px;
+}
+.chatTime.me{
+	text-align:right;
+}
+.chatContent{
+	text-align: left;
+	background: #FFFFFF;
+	padding:10px;
+	border-radius: 3px;
+	max-width:500px;
+	display:inline-block;
+	font-weight: bold;
+	font-size:14px;
+}
+.chatContent.me{
+	background: #A2E563;
+}
+.chatContent img{
+	max-width:200px;
+}
+.chatContent.hasImage{
+	//background: none;
+}
+.arrow{
+	width:0;
+	height:0;
+	border-right:5px solid #FFFFFF;
+	border-top:5px solid transparent;
+	border-bottom:5px solid transparent;
+	position: absolute;
+	left:-4px;
+	top:18px;
+}
+.arrow.me{
+	border-left:5px solid #A2E563;
+	border-right:0px;
+	right:-4px;
+	left:auto;
+}
+.loginTipBox{
+	position: relative;
+	height:50px;
+}
+.loginTip{
+	background: #CECECE;
+	color:white;
+	padding: 5px 10px;
+	border-radius: 5px;
+	font-size:10px;
+	left:50%;
+	top:50%;
+	transform: translate(-50%,-50%);
+	position: absolute;
+}
+			
+/*聊天内容区CSS结束*/
+
+/*聊天窗口CSS结束*/
+
+/*聊天操作区CSS开始*/
+#chatActionBox{
+	width:100%;
+	//overflow: hidden;
+}
+#chatAction{
+	background-image: url("../images/h1_bg.png");
+	position: relative;
+	height:72.75px;
+	max-height:86px;
+}
+#smile{
+	width:30px; 
+	height:30px;
+	//display:inline-block;
+	left:8px;
+	top: 3px;
+	//color:white;
+	position:absolute;
+	//font-size:40px;
+	//line-height: 30px;
+	//font-weight: bolder;
+	border-radius: 55%;
+}
+.emoji{
+	max-width: 100px !important;
+}
+.picture{
+	color:white;
+	font-size:30px;
+	left:48px;
+}
+#chooseImg{
+	position: absolute;
+	top:4px;
+	left: 48px;
+	height:30px;
+	width: 30px;
+	overflow: hidden;
+	opacity: 0;
+}
+#sendBox:after{
+	content:"";
+	display: block;
+	clear:both;
+}
+#newMsg{
+	vertical-align: middle;
+	border:1px solid black;
+	width:calc(100% - 55px);
+	background: white;
+	min-height:35px;
+	max-height:35px;
+	overflow: scroll;
+	float:left;
+	outline: 0px;
+}
+#sendMsg{
+	float:left;
+	width:55px;
+}
+#emoji{
+	position: absolute;
+	display:none;
+	bottom:72.75px;
+	z-index:1000;
+	background: #EBEBEB;
+	max-height:20rem;
+	overflow-y: auto;
+}
+#emojiWrapper{
+	
+}
+#emojiWrapper img{
+	width:52px;
+}
+.shade{
+	width:100vw;
+	height:100vh;
+	left:0;
+	top:0;
+	background:black;
+	position:absolute;
+	z-index:10001;
+	display: none;
+}
+.imgWrapper{
+	display:table-cell;
+	width:100vw;
+	height:100vh;
+	vertical-align: middle;
+}
+.shade img{
+	width:100vw;
+	height:auto;
+	margin: auto auto;
+	
+}
+/*媒体查询部分开始*/
+@media screen and (min-width:992px){
+	html{
+		font-size:12px;
+	}
+}
+@media screen and (min-width:1200px){
+	html{
+		font-size:14px;
+	}
+}
+/*媒体查询部分结束*/
+			
+			
+/*聊天信息显示CSS*/	
+			
+			
+/*聊天信息显示CSS*/	

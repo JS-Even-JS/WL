@@ -1,0 +1,32 @@
+<!DOCYTYP html>
+<html lang="zh-cn">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
+		<link href="./css/bootstrap.min.css" rel="stylesheet" type="text/css">
+		<link href="./css/index.css" rel="stylesheet" type="text/css">
+		<style type="text/css"></style>
+		<script src="./js/jquery.js"></script>
+		<script src="./js/index.js"></script>
+	</head>
+	<body>
+		<div class="container">
+			<div class="title">微聊登录</div>
+			<div class="login-box">
+				<div class="login">
+					<form class="form-inline" action="/chat" method="get" id="loginForm">
+  						<div class="form-group fix_width">
+    				    	<div class="input-group fix_width">
+      							<div class="input-group-addon user_width">用户名:</div>
+      							<input style="display: none;" type="text" /> 
+      							<input type="text" class="form-control" id="userName" name="userName" placeholder="用户名">
+   							</div>
+  						</div>
+  						<span id="userInfo"></span>
+  						<button type="button" id="loginBtn" class="btn btn-warning">登录</button>
+					</form>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

@@ -158,8 +158,8 @@ WL.prototype={
 		//处理发送给所有人的未读消息
 		var spanJqObj =null;
 		if(message.to=="所有人"){//如果是群聊信息
-						spanJqObj = $(lis.get(0)).find("span");//则直接拿到所有人即第一个li元素所在的span对象
-					}else{//如果是私聊信息则进行遍历所有用户,找到消息发送者所在的span元素对象
+			spanJqObj = $(lis.get(0)).find("span");//则直接拿到所有人即第一个li元素所在的span对象
+		}else{//如果是私聊信息则进行遍历所有用户,找到消息发送者所在的span元素对象
 			for(var i=0;i<lis.length;i++){//遍历每一个li元素
 				var aJqObj = $(lis[i]).find("a");//找到li元素中的a元素对象
 				if(aJqObj.html()==message.from.userName){//找到消息发送者
